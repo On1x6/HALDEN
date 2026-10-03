@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop — Halden</title>
+  <meta name="description" content="Browse all Halden skincare: cleansers, serums, moisturisers and SPF.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="shop">
+<main id="main">
+<section class="page-hero"><div class="container"><h1>Shop all</h1><p>Six formulas, each doing one job well. Filter by step in your routine.</p></div></section>
+<section class="section"><div class="container">
+  <div class="toolbar">
+    <div class="filters" role="group" aria-label="Filter by category" id="filters">
+      <button class="chip is-active" data-filter="all" aria-pressed="true">All</button><button class="chip" data-filter="cleanse" aria-pressed="false">Cleanse</button><button class="chip" data-filter="treat" aria-pressed="false">Treat</button><button class="chip" data-filter="moisturise" aria-pressed="false">Moisturise</button><button class="chip" data-filter="protect" aria-pressed="false">Protect</button>
+    </div>
+    <div class="toolbar__right"><span id="resultCount" aria-live="polite"></span>
+      <label class="sr" for="sort">Sort by</label>
+      <select class="select" id="sort"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="rating">Top rated</option></select></div>
+  </div>
+  <div class="grid" id="productGrid" aria-live="polite"></div>
+  <p class="empty" id="emptyState" hidden>No products match that search. Clear it or choose All to see everything.</p>
+</div></section>
+</main>
+<script src="products.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
